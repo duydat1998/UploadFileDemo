@@ -10,7 +10,7 @@ using System.Web.Http;
 
 namespace UploadFileDemo.Controllers
 {
-    public class FileUploadController : ApiController
+    public class fileuploadController : ApiController
     {
         public Task<HttpResponseMessage> Post()
         {
