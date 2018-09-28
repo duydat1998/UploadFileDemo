@@ -38,11 +38,10 @@ namespace UploadFileDemo.Controllers
                         {
                             //Replace / from file name
                             string name = dataitem.Headers.ContentDisposition.FileName.Replace("\"", "");
-                            //Create New file name using GUID to prevent duplicate file name
-                            string newFileName = Guid.NewGuid() + Path.GetExtension(name);
-                            //Move file from current location to target folder.
-                            File.Move(dataitem.LocalFileName, Path.Combine(rootPath, newFileName));
-
+                            ////Create New file name using GUID to prevent duplicate file name
+                            //string newFileName = Guid.NewGuid() + Path.GetExtension(name);
+                            ////Move file from current location to target folder.
+                            File.Move(dataitem.LocalFileName, Path.Combine(rootPath, name));
 
                         }
                         catch (Exception ex)
